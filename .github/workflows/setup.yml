@@ -30,7 +30,11 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: recursive
+<<<<<<< HEAD
         ref: main
+=======
+        ref: master
+>>>>>>> refs/remotes/origin/main
     - id: config
       uses: ./.github/actions/load-config
     - id: get-key
