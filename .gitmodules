@@ -1,3 +1,6 @@
 [submodule "yay"]
 	path = yay
 	url = https://aur.archlinux.org/yay.git
+[submodule "pacrepo-cli"]
+	path = pacrepo-cli
+	url = https://github.com/DCx7C5/pacrepo-cli
