@@ -23,7 +23,6 @@ jobs:
       pub-gpg: ${{ steps.config.outputs.pub-gpg }}
       email: ${{ steps.config.outputs.email }}
       name: ${{ steps.config.outputs.name }}
-
       gpg-key: ${{ steps.get-key.outputs.key }}
       has-token: ${{ steps.get-key.outputs.has_token }}
       generate: ${{ steps.get-key.outputs.generate }}
@@ -31,6 +30,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: recursive
+	token: ${{ secrets.REPO_TOKEN }}
         ref: master
     - id: config
       uses: ./.github/actions/load-config
